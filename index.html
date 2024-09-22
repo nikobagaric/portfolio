@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./css/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niko Bagarić</title>
+  </head>
+  <body>
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--big">
+        <svg height="35" width="35">
+          <circle cx="15" cy="15" r="15" stroke-width="0"></circle>
+        </svg>
+      </div>
+
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+    <header>
+      <h1 class="header__title hoverable">Niko Bagarić</h1>
+      <nav class="header__nav">
+        <li><a href="#hero" class="header__nav__link hoverable">Home</a></li>
+        <li><a href="#about" class="header__nav__link hoverable">About</a></li>
+        <li>
+          <a href="#project__" class="header__nav__link hoverable">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" class="header__nav__link hoverable">Contact</a>
+        </li>
+      </nav>
+    </header>
+    <section id="hero">
+      <h1 class="hero__title hoverable">WELCOME TO MY PORTFOLIO</h1>
+    </section>
+    <section id="about">
+      <div class="about__left">
+        <h1 class="about__title">About me</h1>
+        <p class="about__text">
+          I am a Croatian student and an aspiring web developer. I am currently
+          studying at the Faculty of Applied Mathematics and Computer Science in
+          Osijek. I have been passionate about web development for a few years
+          now and I am constantly learning new things. I am especially
+          interested in mathematics and AI, and I am looking forward to
+          combining these interests with web development in the future. In my
+          free time I play the guitar and lorem ipsum. I am currently looking
+          for a part-time job as a web developer, so if you are interested in
+          working with me, feel free to contact me.
+        </p>
+      </div>
+      <div class="about__right">
+        <!-- Maybe add more images? -->
+        <img
+          src="/about1.jpg"
+          alt="An image of me!"
+          class="about__image hoverable"
+        />
+      </div>
+    </section>
+    <hr color="white" />
+    <div class="marquee">
+      <div class="marquee__item">FRONT END</div>
+      <div class="marquee__item">BACK END</div>
+      <div class="marquee__item">GRAPHICS</div>
+      <div class="marquee__item">AI</div>
+      <div class="marquee__item">ALGORITHMS</div>
+    </div>
+    <hr color="white" />
+    <span
+      id="project__"
+      style="position: relative; top: 0; left: 0; width: 0"
+    ></span>
+    <section id="project">
+      <article class="project__group">
+        <div class="project__group__top">
+          <h1 class="project__group__title hoverable">BACK-END</h1>
+          <p class="project__group__text">
+            I primarily focus on back-end development. I have experience with
+            Node.js, Django and Spring Boot. I am also familiar with databases
+            such as PostgreSQL and MySQL, and with tools like Docker and Git. Up
+            to this point, I've had two internships where my primary focus was
+            back-end.
+          </p>
+        </div>
+        <div class="project__group__bottom">
+          <a href="" class="project__group__link"
+            ><img src="" alt="" class="project__group__image"
+          /></a>
+        </div>
+      </article>
+      <article class="project__group">
+        <h1 class="project__group__title hoverable">Front-End</h1>
+      </article>
+      <article class="project__group">
+        <h1 class="project__group__title hoverable">Other</h1>
+      </article>
+    </section>
+    <section id="contact"></section>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

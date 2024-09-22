@@ -1,0 +1,294 @@
+/*
+*  --------------------------------------------------
+*  BEGIN OF RESET
+*  CREDITS TO JOSH W. COMEAU FOR THIS RESET :D
+*  https://www.joshwcomeau.com/css/custom-css-reset/
+*  --------------------------------------------------
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+* {
+  cursor: none;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/*
+*  --------------------------------------------------
+*  END OF RESET
+*  --------------------------------------------------
+*/
+
+/*
+* --------------------------------------------------
+* BEGIN OF CUSTOM STYLES
+* --------------------------------------------------
+*/
+@font-face {
+  font-family: "Anek Devanagari";
+  src: url("/fonts/AnekDevanagari-VariableFont_wdth,wght.ttf");
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Anek Devanagari", sans-serif;
+  background-color: black;
+  font-weight: 200;
+  scroll-behavior: auto;
+}
+
+.cursor {
+  pointer-events: none;
+
+  &__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1001;
+
+    circle {
+      fill: #f7f8fa;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: none;
+  padding: 0 20px;
+  mix-blend-mode: difference;
+}
+
+.header {
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    &__link {
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+  }
+}
+
+section {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/*
+* --------------------------------------------------
+* START OF HERO SECTION
+* --------------------------------------------------
+*/
+
+#hero {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero {
+  &__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    background: none;
+  }
+  &__title {
+    font-size: 7rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1rem;
+    mix-blend-mode: difference;
+    letter-spacing: 10px;
+  }
+}
+
+/*
+* --------------------------------------------------
+* END OF HERO SECTION
+* --------------------------------------------------
+*/
+
+/*
+* --------------------------------------------------
+* START OF ABOUT SECTION
+* --------------------------------------------------
+*/
+
+#about {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.about {
+  &__left,
+  &__right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__right {
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    margin-top: 10rem;
+    font-size: 5rem;
+    font-weight: 200;
+  }
+  &__text {
+    text-align: justify;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  &__image {
+    max-width: 400px;
+    max-height: 100%;
+    object-fit: cover;
+    box-shadow: white 10px 10px;
+  }
+}
+
+.marquee {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  width: 120%;
+  &__item {
+    width: 25%;
+    font-size: 3rem;
+    font-weight: 200;
+  }
+}
+
+/*
+* --------------------------------------------------
+* END OF ABOUT SECTION
+* --------------------------------------------------
+*/
+
+/*
+* --------------------------------------------------
+* START OF PROJECTS SECTION
+* --------------------------------------------------
+*/
+
+#project {
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  width: 300vw;
+  overflow: hidden;
+}
+
+.project {
+  &__group {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 20px;
+    &__title {
+      margin-top: 10rem;
+      font-size: 10rem;
+      font-weight: 500;
+    }
+    &__top {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    &__text {
+      margin-top: 10rem;
+      text-align: justify;
+      font-size: 2rem;
+      font-weight: 200;
+      max-width: 50%;
+    }
+  }
+}
