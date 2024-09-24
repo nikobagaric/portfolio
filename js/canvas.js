@@ -129,6 +129,9 @@ function render() {
     if (intersects.length > 0) {
       const intersect = intersects[0].point;
 
+      // Adjust the intersection point by the scroll offset
+      intersect.y -= scrollY * 0.02;
+
       for (let i = 0; i < particleCount; i++) {
         // Apply the rotation matrix to the particle positions
         const position = new THREE.Vector3(

@@ -19,9 +19,20 @@ const marqueeItems = gsap.utils.toArray(".marquee__item");
 // Project section elements
 const projectGroups = gsap.utils.toArray(".project__group");
 
+let isMobileDevice = isMobile();
+
 function isMobile() {
-    return window.innerWidth <= 768;
+  return (
+    window.innerWidth <= 768 ||
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+    ('ontouchstart' in window || navigator.maxTouchPoints > 0)
+  );
 }
+
+window.addEventListener("resize", () => {
+  isMobileDevice = isMobile();
+}
+);
 
 // Smooth scroll for anchor links, overwriting due to errors with
 // the default scroll behavior
@@ -97,7 +108,7 @@ const loop = horizontalLoop(marqueeItems, {
 });
 
 // Project horizontal pin animation
-if(!isMobile()) {
+if(!isMobileDevice) {
   gsap.to(projectGroups, {
     xPercent: -100 * (projectGroups.length - 1),
     ease: "power1.inOut",

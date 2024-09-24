@@ -143,6 +143,11 @@ header {
       font-weight: 200;
     }
   }
+  &__title {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 }
 
 section {
@@ -186,6 +191,18 @@ section {
     margin-bottom: 1rem;
     mix-blend-mode: difference;
     letter-spacing: 10px;
+    @media (max-width: 1200px) {
+      font-size: 6rem;
+    }
+    @media (max-width: 992px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 576px) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -201,10 +218,21 @@ section {
 * --------------------------------------------------
 */
 
+/*
+* --------------------------------------------------
+* START OF ABOUT SECTION
+* --------------------------------------------------
+*/
+
 #about {
   display: flex;
   justify-content: center;
   height: 100vh;
+  padding: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .about {
@@ -213,6 +241,10 @@ section {
     width: 50%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 768px) {
+      width: 100%;
+      align-items: center;
+    }
   }
   &__right {
     justify-content: center;
@@ -222,17 +254,31 @@ section {
     margin-top: 10rem;
     font-size: 5rem;
     font-weight: 200;
+    @media (max-width: 768px) {
+      margin-top: 2rem;
+      font-size: 3rem;
+      text-align: center;
+    }
   }
   &__text {
     text-align: justify;
     font-size: 2rem;
     font-weight: 200;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0 20px;
+    }
   }
   &__image {
     max-width: 400px;
     max-height: 100%;
     object-fit: cover;
     box-shadow: white 10px 10px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-top: 20px;
+    }
   }
 }
 
@@ -241,12 +287,21 @@ section {
   position: relative;
   display: flex;
   width: 120%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   &__item {
     width: 25%;
     font-size: 3rem;
     font-weight: 200;
   }
 }
+
+/*
+* --------------------------------------------------
+* END OF ABOUT SECTION
+* --------------------------------------------------
+*/
 
 /*
 * --------------------------------------------------
@@ -266,6 +321,11 @@ section {
   height: 100vh;
   width: 300vw;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
 }
 
 .project {
@@ -274,14 +334,39 @@ section {
     height: 100vh;
     width: 100vw;
     padding: 0 20px;
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+      height: auto;
+      width: 100%;
+      padding: 20px;
+    }
     &__title {
       margin-top: 10rem;
       font-size: 10rem;
       font-weight: 500;
+      @media screen and (max-width: 768px) {
+        margin-top: 2rem;
+        font-size: 5rem;
+        text-align: center;
+      }
     }
     &__top {
       display: flex;
       justify-content: space-evenly;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
     &__text {
       margin-top: 10rem;
@@ -289,6 +374,193 @@ section {
       font-size: 2rem;
       font-weight: 200;
       max-width: 50%;
+      @media screen and (max-width: 768px) {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+    &__link {
+      width: 90%;
+      border: 1px solid white;
+      padding: 20px;
+      transition: 0.2s ease-in-out;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 10px;
+      }
+      &__title {
+        font-size: 2rem;
+        font-weight: 200;
+        @media screen and (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+      &__text {
+        font-size: 1.2rem;
+        font-weight: 200;
+        @media screen and (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
+    }
+    &__link:hover {
+      scale: 1.05;
+      margin: 10px;
     }
   }
 }
+
+/*
+* --------------------------------------------------
+* END OF PROJECTS SECTION
+* --------------------------------------------------
+*/
+
+/*
+* --------------------------------------------------
+* START OF CONTACT SECTION
+* --------------------------------------------------
+*/
+
+#contact {
+  display: flex;
+  background-color: white;
+  color: black;
+  height: 50vh;
+  padding: 20px;
+  justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+.contact {
+  &__left, &__right {
+    width: 50%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 300;
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: justify;
+    width: 100%;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  &__infolist {
+    padding: 0;
+    margin-top: 30px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      text-align: center;
+    }
+    &__item {
+      font-size: 1.5rem;
+      font-weight: 200;
+      margin-bottom: 10px;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  &__social {
+    h3 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+    }
+    a {
+      margin-right: 10px;
+      img {
+        width: 24px;
+        height: 24px;
+        @media (max-width: 768px) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  &__links {
+    h3 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+    }
+    ul {
+      padding: 0;
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+      li {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin-bottom: 10px;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+/*
+* --------------------------------------------------
+* END OF CONTACT SECTION
+* --------------------------------------------------
+*/
+
+/*
+* --------------------------------------------------
+* END OF CUSTOM STYLES
+* --------------------------------------------------
+*/
