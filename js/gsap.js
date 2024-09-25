@@ -114,7 +114,7 @@ if(!isMobileDevice) {
     ease: "power1.inOut",
     scrollTrigger: {
       trigger: "#project",
-      start: "top top", // Adjust start point as needed
+      start: "top top",
       pin: true,
       scrub: 1,
       anticipatePin: 1,
