@@ -142,6 +142,7 @@ function render() {
 
         // Adjust for the position of the points system
         position.add(points.position);
+        position.y -= 3;
 
         const dx = position.x - intersect.x;
         const dy = position.y - intersect.y;

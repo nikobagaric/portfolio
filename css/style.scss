@@ -13,6 +13,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -83,6 +84,7 @@ html {
 * BEGIN OF CUSTOM STYLES
 * --------------------------------------------------
 */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @font-face {
   font-family: "Anek Devanagari";
   src: url("/fonts/AnekDevanagari-VariableFont_wdth,wght.ttf");
@@ -95,7 +97,7 @@ html {
 }
 
 body {
-  font-family: "Anek Devanagari", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   background-color: black;
   font-weight: 200;
   scroll-behavior: auto;
@@ -186,7 +188,7 @@ section {
   }
   &__title {
     font-size: 7rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 1rem;
     mix-blend-mode: difference;
@@ -209,12 +211,6 @@ section {
 /*
 * --------------------------------------------------
 * END OF HERO SECTION
-* --------------------------------------------------
-*/
-
-/*
-* --------------------------------------------------
-* START OF ABOUT SECTION
 * --------------------------------------------------
 */
 
@@ -283,7 +279,6 @@ section {
 }
 
 .marquee {
-  margin-top: 20px;
   position: relative;
   display: flex;
   width: 120%;
@@ -296,12 +291,6 @@ section {
     font-weight: 200;
   }
 }
-
-/*
-* --------------------------------------------------
-* END OF ABOUT SECTION
-* --------------------------------------------------
-*/
 
 /*
 * --------------------------------------------------
@@ -333,12 +322,12 @@ section {
     display: flex;
     height: 100vh;
     width: 100vw;
-    padding: 0 20px;
     flex-direction: column;
+    padding: 0 20px;
     @media screen and (max-width: 768px) {
       height: auto;
       width: 100%;
-      padding: 20px;
+      
     }
     &__title {
       margin-top: 10rem;
@@ -352,7 +341,8 @@ section {
     }
     &__top {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
+      margin-bottom: 20px;
       @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;
@@ -362,7 +352,7 @@ section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-evenly;
+      padding: 0 20px;
       @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: center;
@@ -382,7 +372,7 @@ section {
       }
     }
     &__link {
-      width: 90%;
+      width: 100%;
       border: 1px solid white;
       padding: 20px;
       transition: 0.2s ease-in-out;
@@ -406,7 +396,7 @@ section {
       }
     }
     &__link:hover {
-      scale: 1.05;
+      scale: 1.015;
       margin: 10px;
     }
   }
