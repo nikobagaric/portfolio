@@ -8,6 +8,7 @@
     <title>Niko Bagarić</title>
   </head>
   <body>
+    <!-- Custom cursor elements -->
     <div class="cursor">
       <div class="cursor__ball cursor__ball--big">
         <svg height="35" width="35">
@@ -21,22 +22,37 @@
         </svg>
       </div>
     </div>
+
+    <!-- Header section with navigation -->
     <header>
       <h1 class="header__title hoverable">Niko Bagarić</h1>
       <nav class="header__nav">
         <li><a href="#hero" class="header__nav__link hoverable">Home</a></li>
         <li><a href="#about" class="header__nav__link hoverable">About</a></li>
-        <li>
-          <a href="#project__" class="header__nav__link hoverable">Projects</a>
-        </li>
-        <li>
-          <a href="#contact" class="header__nav__link hoverable">Contact</a>
-        </li>
+        <li><a href="#project__" class="header__nav__link hoverable">Projects</a></li>
+        <li><a href="#contact" class="header__nav__link hoverable">Contact</a></li>
+      </nav>
+      <!-- Hamburger menu for mobile view -->
+      <div class="header__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile navigation menu -->
+      <nav class="header__mobile-nav">
+        <li><a href="#hero" class="header__mobile-nav__link">Home</a></li>
+        <li><a href="#about" class="header__mobile-nav__link">About</a></li>
+        <li><a href="#project__" class="header__mobile-nav__link">Projects</a></li>
+        <li><a href="#contact" class="header__mobile-nav__link">Contact</a></li>
       </nav>
     </header>
+
+    <!-- Hero section -->
     <section id="hero">
       <h1 class="hero__title hoverable">MY DIGITAL EXPERIENCE</h1>
     </section>
+
+    <!-- About section -->
     <section id="about">
       <div class="about__left">
         <h1 class="about__title">About me</h1>
@@ -53,7 +69,7 @@
         </p>
       </div>
       <div class="about__right">
-        <!-- Maybe add more images? -->
+        <!-- About section image -->
         <img
           src="/about1.jpg"
           alt="An image of me!"
@@ -61,6 +77,8 @@
         />
       </div>
     </section>
+
+    <!-- Marquee section -->
     <hr color="white" />
     <div class="marquee">
       <div class="marquee__item">FRONT END</div>
@@ -70,11 +88,11 @@
       <div class="marquee__item">ALGORITHMS</div>
     </div>
     <hr color="white" />
-    <span
-      id="project__"
-      style="position: relative; top: 0; left: 0; width: 0"
-    ></span>
+
+    <!-- Projects section -->
+    <span id="project__" style="position: relative; top: 0; left: 0; width: 0"></span>
     <section id="project">
+      <!-- Back-end projects -->
       <article class="project__group">
         <div class="project__group__top">
           <h1 class="project__group__title hoverable">BACK-END</h1>
@@ -127,6 +145,8 @@
           </a>
         </div>
       </article>
+
+      <!-- Front-end projects -->
       <article class="project__group">
         <div class="project__group__top">
           <h1 class="project__group__title hoverable">FRONT-END</h1>
@@ -177,13 +197,16 @@
           </a>
         </div>
       </article>
+
+      <!-- Other projects -->
       <article class="project__group">
         <div class="project__group__top">
           <h1 class="project__group__title hoverable">OTHER</h1>
           <p class="project__group__text">
-            Some of my other projects include a TensorFlow notebook, a collection
-            of competitive programming solutions, and other fun programming projects
-            unrelated to web development. I am always looking for new projects to work on.
+            Some of my other projects include a TensorFlow notebook, a
+            collection of competitive programming solutions, and other fun
+            programming projects unrelated to web development. I am always
+            looking for new projects to work on.
           </p>
         </div>
         <div class="project__group__bottom">
@@ -192,7 +215,9 @@
             class="project__group__link hoverable"
             target="_blank"
           >
-            <h1 class="project__group__link__title">TensorFlow Jupyter notebooks</h1>
+            <h1 class="project__group__link__title">
+              TensorFlow Jupyter notebooks
+            </h1>
             <p class="project__group__link__text">
               This is a collection of my Jupyter notebooks that I used to learn
               TensorFlow. The notebooks cover topics such as image recognition,
@@ -203,6 +228,8 @@
         </div>
       </article>
     </section>
+
+    <!-- Contact section -->
     <footer id="contact">
       <div class="contact__left">
         <h2 class="contact__title">Get in touch with me!</h2>
@@ -213,21 +240,49 @@
         </p>
         <ul class="contact__infolist">
           <li class="contact__infolist__item">
-            Email: <a href="mailto:niko.bagaric275@gmail.com" class="hoverable">
-              niko.bagaric275@gmail.com</a>
+            Email:
+            <a href="mailto:niko.bagaric275@gmail.com" class="hoverable">
+              niko.bagaric275@gmail.com</a
+            >
           </li>
           <li class="contact__infolist__item">
-            LinkedIn: <a class="hoverable" href="https://hr.linkedin.com/in/niko-bagari%C4%87-07a391230">
-              Niko Bagarić</a>
+            LinkedIn:
+            <a
+              class="hoverable"
+              href="https://hr.linkedin.com/in/niko-bagari%C4%87-07a391230"
+            >
+              Niko Bagarić</a
+            >
           </li>
         </ul>
       </div>
       <div class="contact__right">
         <div class="contact__social">
           <h3>Follow me</h3>
-          <a href="https://github.com/nikobagaric" target="_blank"><img src="path/to/github-icon.png" class="hoverable" alt="GitHub"></a>
-          <a href="https://twitter.com/nikobagaric" target="_blank"><img src="path/to/twitter-icon.png" class="hoverable" alt="Twitter"></a>
-          <a href="https://www.linkedin.com/in/nikobagaric" target="_blank"><img src="path/to/linkedin-icon.png" class="hoverable" alt="LinkedIn"></a>
+          <a href="https://github.com/nikobagaric" target="_blank"
+            ><img
+              src="/github.svg"
+              class="hoverable"
+              alt="GitHub"
+              class="contact__social__icon"
+            />GitHub</a
+          >
+          <a href="https://twitter.com/nikobagaric" target="_blank"
+            ><img
+              src="/x_logo.svg"
+              class="hoverable"
+              alt="Twitter"
+              class="contact__social__icon"
+            />X (Twitter)</a
+          >
+          <a href="https://www.linkedin.com/in/nikobagaric" target="_blank"
+            ><img
+              src="/linkedin.svg"
+              class="hoverable"
+              alt="LinkedIn"
+              class="contact__social__icon"
+            />LinkedIn</a
+          >
         </div>
         <div class="contact__links">
           <h3>Quick Links</h3>
@@ -239,6 +294,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Main JavaScript file -->
     <script type="module" src="/main.js"></script>
-  </body> 
+  </body>
 </html>

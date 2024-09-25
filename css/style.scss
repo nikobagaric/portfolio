@@ -55,6 +55,9 @@ h6 {
 * {
   cursor: none;
   font-weight: inherit;
+  @media screen and (max-width: 768px) {
+    cursor: auto;
+  }
 }
 
 a {
@@ -85,10 +88,6 @@ html {
 * --------------------------------------------------
 */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@font-face {
-  font-family: "Anek Devanagari";
-  src: url("/fonts/AnekDevanagari-VariableFont_wdth,wght.ttf");
-}
 
 html {
   overflow-x: hidden;
@@ -105,6 +104,10 @@ body {
 
 .cursor {
   pointer-events: none;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   &__ball {
     position: fixed;
@@ -132,6 +135,9 @@ header {
   background: none;
   padding: 0 20px;
   mix-blend-mode: difference;
+  @media screen and (max-width: 768px) {
+    mix-blend-mode: normal;
+  }
 }
 
 .header {
@@ -144,10 +150,52 @@ header {
       font-size: 1.5rem;
       font-weight: 200;
     }
+    @media screen and (max-width: 768px) {
+      display: none;
+      
+    }
   }
   &__title {
     @media screen and (max-width: 768px) {
       display: none;
+    }
+  }
+  &__hamburger {
+    display: none;
+    z-index: 1001;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: white;
+      margin: 5px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &__mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(100px);
+    &.active {
+      display: flex;
+    }
+    &__link {
+      font-size: 2rem;
+      font-weight: 300;
     }
   }
 }
@@ -157,6 +205,10 @@ section {
   width: 100%;
   z-index: 1;
   padding: 0 20px;
+}
+
+@keyframes spanimation {
+  
 }
 
 /*
@@ -318,6 +370,9 @@ section {
 }
 
 .project {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
   &__group {
     display: flex;
     height: 100vh;
@@ -501,10 +556,14 @@ section {
       }
     }
     a {
-      margin-right: 10px;
+      display: flex;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
       img {
+        filter: brightness(0%);
         width: 24px;
         height: 24px;
+        margin-right: 10px;
         @media (max-width: 768px) {
           width: 20px;
           height: 20px;
